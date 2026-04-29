@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RoastMyCV - Brutally Honest Career Advice</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-tint": "#855300",
+                        "tertiary-fixed": "#c5e7ff",
+                        "primary-fixed-dim": "#ffb95f",
+                        "on-tertiary-fixed-variant": "#004c6a",
+                        "on-error": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "surface-container-low": "#fff1e5",
+                        "on-error-container": "#93000a",
+                        "primary": "#855300",
+                        "outline-variant": "#d8c3ad",
+                        "on-surface-variant": "#534434",
+                        "on-tertiary": "#ffffff",
+                        "surface-dim": "#e7d7c9",
+                        "on-primary-fixed-variant": "#653e00",
+                        "on-tertiary-container": "#004966",
+                        "tertiary": "#00658b",
+                        "secondary": "#575e70",
+                        "secondary-container": "#d9dff5",
+                        "on-secondary-fixed": "#141b2b",
+                        "on-primary-fixed": "#2a1700",
+                        "inverse-surface": "#382f25",
+                        "on-secondary-container": "#5c6274",
+                        "surface-container-high": "#f5e6d7",
+                        "surface-bright": "#fff8f4",
+                        "surface": "#f9fafb", /* Overridden per style guidance */
+                        "on-surface": "#221a12",
+                        "on-primary": "#ffffff",
+                        "on-primary-container": "#613b00",
+                        "outline": "#867461",
+                        "inverse-primary": "#ffb95f",
+                        "error": "#ba1a1a",
+                        "primary-fixed": "#ffddb8",
+                        "on-secondary-fixed-variant": "#404758",
+                        "surface-container-highest": "#f0e0d1",
+                        "error-container": "#ffdad6",
+                        "surface-variant": "#f0e0d1",
+                        "tertiary-fixed-dim": "#7fd0ff",
+                        "secondary-fixed": "#dce2f7",
+                        "on-tertiary-fixed": "#001e2d",
+                        "on-background": "#221a12",
+                        "inverse-on-surface": "#feeedf",
+                        "secondary-fixed-dim": "#c0c6db",
+                        "primary-container": "#f59e0b",
+                        "surface-container": "#fbebdd",
+                        "tertiary-container": "#1abdff",
+                        "background": "#f9fafb" /* Overridden per style guidance */
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "stack-md": "24px",
+                        "stack-sm": "12px",
+                        "margin-page": "40px",
+                        "gutter": "24px",
+                        "container-max": "1024px",
+                        "stack-lg": "48px"
+                    },
+                    "fontFamily": {
+                        "h1": ["Inter"],
+                        "h2": ["Inter"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "h3": ["Inter"],
+                        "label-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "h1": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "h2": ["30px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400" }],
+                        "h3": ["20px", { "lineHeight": "1.3", "letterSpacing": "0", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #F9FAFB; }
+        .roast-card-shadow { box-shadow: 0px 4px 20px rgba(0,0,0,0.03); }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="bg-white sticky top-0 w-full z-50 border-b border-gray-100 font-h1 text-gray-900 flex justify-between items-center h-16 px-6 max-w-5xl mx-auto w-full flat no shadows">
+<div class="flex items-center gap-4">
+<div class="text-xl font-black text-gray-900 flex items-center gap-2">RoastMyCV</div>
+<span class="text-gray-500 font-body-md hidden sm:inline-block">Your CV, brutally honest.</span>
+</div>
+<button class="bg-primary-container text-gray-900 font-bold px-4 py-2 rounded-lg hover:bg-gray-50 transition-colors active:scale-95 duration-150">
+            Roast My CV
+        </button>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow flex flex-col items-center w-full px-6 py-stack-lg max-w-[1024px] mx-auto">
+<!-- Hero Section -->
+<div class="text-center w-full mb-stack-lg max-w-2xl">
+<h1 class="font-h1 text-h1 text-gray-900 mb-stack-sm">Paste your CV. Get roasted.</h1>
+<p class="font-body-lg text-body-lg text-gray-600">AI-powered feedback that's honest, sharp, and actually useful.</p>
+</div>
+<!-- Input Area -->
+<div class="w-full max-w-3xl mb-stack-lg flex flex-col gap-stack-md">
+<div class="relative w-full rounded-lg bg-white border border-gray-200 focus-within:border-amber-500 focus-within:border-b-2 transition-all duration-200 roast-card-shadow">
+<textarea class="w-full h-64 p-6 bg-transparent border-none focus:ring-0 resize-none font-body-md text-gray-800 placeholder-gray-400" placeholder="Paste your CV text here..."></textarea>
+</div>
+<button class="self-center bg-primary-container text-[#111827] font-bold py-4 px-12 rounded-lg text-body-lg hover:bg-amber-400 transition-colors active:scale-95 shadow-sm">
+                Roast My CV 🔥
+            </button>
+</div>
+<!-- Loading State (Hidden by default, used for reference) -->
+<!--
+        <div class="w-full flex flex-col items-center justify-center py-24 gap-4">
+            <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-amber-500"></div>
+            <p class="font-body-md text-gray-500">Roasting your CV...</p>
+        </div>
+        -->
+<!-- Results Section (Example State) -->
+<div class="w-full flex flex-col gap-stack-lg mt-stack-lg border-t border-gray-200 pt-stack-lg">
+<!-- Score Header -->
+<div class="flex flex-col items-center text-center mb-stack-md">
+<span class="font-label-sm text-label-sm text-gray-500 uppercase tracking-widest mb-2">CV Score</span>
+<div class="font-h1 text-[64px] font-bold text-gray-900 leading-none mb-4">72<span class="text-gray-400 text-h2">/100</span></div>
+<!-- Minimalist Gauge -->
+<div class="w-64 h-2 bg-gray-200 rounded-full overflow-hidden">
+<div class="h-full bg-amber-500 w-[72%]"></div>
+</div>
+</div>
+<!-- Bento Grid Results -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter w-full">
+<!-- The Roast (Crucial Feedback) -->
+<div class="bg-white border border-[#F3F4F6] rounded-xl p-6 relative overflow-hidden roast-card-shadow md:col-span-2">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-amber-500"></div>
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-amber-500">local_fire_department</span>
+<h3 class="font-label-sm text-label-sm text-gray-500 uppercase">The Roast</h3>
+</div>
+<p class="font-body-md text-gray-800 leading-relaxed">
+                        Your summary reads like a generic template from 2015. "Motivated professional seeking opportunities" tells me absolutely nothing about what you actually do. You list 'Python' as a skill, but your experience section only mentions writing one script. Stop padding. Focus on the impact of the tools you actually know.
+                    </p>
+</div>
+<!-- What's Good -->
+<div class="bg-white border border-[#F3F4F6] rounded-xl p-6 roast-card-shadow flex flex-col">
+<div class="flex items-center gap-2 mb-4 border-b border-[#F3F4F6] pb-4">
+<span class="material-symbols-outlined text-green-600">check_circle</span>
+<h3 class="font-label-sm text-label-sm text-gray-500 uppercase">What's Good</h3>
+</div>
+<ul class="flex flex-col gap-3 font-body-md text-gray-700">
+<li class="flex items-start gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-green-500 mt-2 flex-shrink-0"></span>
+<span>Clear, consistent formatting makes it easy to skim.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-green-500 mt-2 flex-shrink-0"></span>
+<span>Strong metrics in your most recent role (e.g., "Increased revenue by 15%").</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-green-500 mt-2 flex-shrink-0"></span>
+<span>Education section is concise and correctly placed.</span>
+</li>
+</ul>
+</div>
+<!-- What's Weak -->
+<div class="bg-white border border-[#F3F4F6] rounded-xl p-6 roast-card-shadow flex flex-col">
+<div class="flex items-center gap-2 mb-4 border-b border-[#F3F4F6] pb-4">
+<span class="material-symbols-outlined text-red-500">cancel</span>
+<h3 class="font-label-sm text-label-sm text-gray-500 uppercase">What's Weak</h3>
+</div>
+<ul class="flex flex-col gap-3 font-body-md text-gray-700">
+<li class="flex items-start gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-red-400 mt-2 flex-shrink-0"></span>
+<span>Too many vague buzzwords ("synergy", "thought leader").</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-red-400 mt-2 flex-shrink-0"></span>
+<span>The skills section is a massive block of text; impossible to read quickly.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-red-400 mt-2 flex-shrink-0"></span>
+<span>Older roles take up too much space compared to recent, relevant experience.</span>
+</li>
+</ul>
+</div>
+<!-- Fix It (Actionable Tips) -->
+<div class="bg-[#FFFDF5] border border-amber-200 rounded-xl p-6 roast-card-shadow md:col-span-2 flex flex-col">
+<div class="flex items-center gap-2 mb-4 border-b border-amber-100 pb-4">
+<span class="material-symbols-outlined text-amber-600">lightbulb</span>
+<h3 class="font-label-sm text-label-sm text-amber-800 uppercase">Fix It</h3>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="bg-white border border-amber-100 rounded-lg p-4">
+<h4 class="font-h3 text-h3 text-gray-900 mb-2">Rewrite Summary</h4>
+<p class="font-body-md text-gray-600 text-sm">Replace generic adjectives with concrete achievements. E.g., "Software Engineer with 4 years building high-traffic Node.js APIs."</p>
+</div>
+<div class="bg-white border border-amber-100 rounded-lg p-4">
+<h4 class="font-h3 text-h3 text-gray-900 mb-2">Quantify Older Roles</h4>
+<p class="font-body-md text-gray-600 text-sm">Trim the bullets on jobs older than 5 years to 1-2 key impactful sentences. Focus on results, not duties.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-gray-50 w-full py-12 mt-24 border-t border-gray-100 font-inter text-sm text-gray-500 flat no shadows flex flex-col items-center justify-center gap-6 px-6 max-w-5xl mx-auto text-center">
+<div class="text-lg font-bold text-gray-900">RoastMyCV</div>
+<div class="flex gap-4">
+<a class="text-gray-400 hover:text-amber-600 transition-opacity opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="text-gray-400 hover:text-amber-600 transition-opacity opacity-80 hover:opacity-100" href="#">Terms of Service</a>
+<a class="text-gray-400 hover:text-amber-600 transition-opacity opacity-80 hover:opacity-100" href="#">Contact</a>
+</div>
+<div class="text-xs text-gray-400 mt-4">© 2024 RoastMyCV. Brutally honest career advice.</div>
+</footer>
+</body></html>
