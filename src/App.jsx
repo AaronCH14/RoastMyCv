@@ -1,10 +1,12 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
 import InputArea from './components/InputArea';
 import LoadingState from './components/LoadingState';
 import ResultSection from './components/ResultSection';
 import Footer from './components/Footer';
+import PWAInstall from './components/PWAInstall';
+import OfflinePage from './components/OfflinePage';
 import { useGemini } from './hooks/useGemini';
 
 export default function App() {
@@ -12,9 +14,22 @@ export default function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [result, setResult] = useState(null);
   const [error, setError] = useState(null);
+  const [isOffline, setIsOffline] = useState(!navigator.onLine);
 
   const { analyzeCV } = useGemini();
   const inputRef = useRef(null);
+
+  // Offline / online detection
+  useEffect(() => {
+    const handleOffline = () => setIsOffline(true);
+    const handleOnline  = () => setIsOffline(false);
+    window.addEventListener('offline', handleOffline);
+    window.addEventListener('online',  handleOnline);
+    return () => {
+      window.removeEventListener('offline', handleOffline);
+      window.removeEventListener('online',  handleOnline);
+    };
+  }, []);
 
   /** Scroll to the textarea when header button is clicked */
   const scrollToInput = () => {
@@ -40,6 +55,9 @@ export default function App() {
       setIsLoading(false);
     }
   };
+
+  // Show offline fallback when there's no connection
+  if (isOffline) return <OfflinePage />;
 
   return (
     <div className="flex flex-col min-h-screen bg-[#F9FAFB] font-inter">
@@ -73,6 +91,9 @@ export default function App() {
       </main>
 
       <Footer />
+
+      {/* PWA install banner — Chrome/Edge native prompt or iOS manual instruction */}
+      <PWAInstall />
     </div>
   );
 }

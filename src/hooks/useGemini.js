@@ -38,11 +38,11 @@ ${cvText}
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         contents: [{ parts: [{ text: prompt }] }],
-        generationConfig: {  // konfigurasi untuk model gemini dari kemampuan berpikir, token output, dan suhu (kreativitas)
+        generationConfig: {  // settings model for CV generate
           temperature: 0.2,
-          maxOutputTokens: 8192,      // Token CV untuk diproses 
+          maxOutputTokens: 8192,      // Token CV generate
           thinkingConfig: {
-            thinkingBudget: 1024,     // // Thinking dan reasoning agar reasoning semakin banyak diproses.
+            thinkingBudget: 1024,     // Thinking and reasoning model
           },
         },
       }),

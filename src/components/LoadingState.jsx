@@ -1,6 +1,3 @@
-/**
- * LoadingState - Centered amber spinner while API is running
- */
 export default function LoadingState() {
   return (
     <div className="w-full flex flex-col items-center justify-center py-24 gap-4">
