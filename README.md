@@ -56,7 +56,7 @@ roastmycv/
 │   │   ├── FixItCard.jsx       # Amber tint card with 2-col tip grid
 │   │   └── Footer.jsx          # Links + copyright
 │   ├── hooks/
-│   │   ├── useGemini.js        # Gemini API call + JSON parsing logic
+│   │   ├── useGemini.js        # Gemini API call + JSON parsing logic (You can customize for the result here:D)
 │   │   └── useFileParser.js    # PDF (pdfjs-dist) + DOCX (mammoth) parser
 │   ├── App.jsx                 # Root — state management + flow control
 │   ├── main.jsx                # React entry point
@@ -145,3 +145,55 @@ License
 Feel free to fork and build on top of it.
 
 Built with React + Vite + Tailwind CSS + Google Gemini API
+
+NOTE ALERT :
+export function useGemini() {
+  const analyzeCV = async (cvText) => {
+    
+    const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+
+    if (!apiKey) {
+      throw new Error('API key not found. Check your .env file has VITE_GEMINI_API_KEY set.');
+    }
+  
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`;
+
+    const prompt = `
+You are a brutally honest but constructive career advisor and CV expert. (you can change the prompt here)
+Analyze the following CV and respond ONLY with a valid JSON object. 
+No markdown, no explanation, just raw JSON.
+
+Return this exact structure:
+{
+  "score": <number 0-100>,
+  "roast": "<a sharp, witty, honest 2-3 sentence roast of the CV overall>",
+  "strengths": ["<strength 1>", "<strength 2>", "<strength 3>"],
+  "weaknesses": ["<weakness 1>", "<weakness 2>", "<weakness 3>"],
+  "tips": [
+    { "title": "<tip title>", "description": "<actionable tip description>" },
+    { "title": "<tip title>", "description": "<actionable tip description>" }
+  ]
+}
+
+CV to analyze:
+${cvText}
+    `;
+
+    const response = await fetch(url, { => this part for accurate and consistently result
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        contents: [{ parts: [{ text: prompt }] }],
+        generationConfig: {  // settings model for CV generate
+          temperature: 0.2,
+          maxOutputTokens: 8192,      // Token CV generate
+          thinkingConfig: {
+            thinkingBudget: 1024,     // Thinking and reasoning model
+          },
+        },
+      }),
+    });
+
+** You can change this part (prompt, temperature and thinking budget at hooks > useGemini.js) if you want consistently and accurate result :D  and if you have subscribed to Gemini Pro, this project will give you  even more detailed, nuanced, and accurate CV feedback with deeper reasoning capabilities and longer context window support. 
+
+Enjoy the project:D
