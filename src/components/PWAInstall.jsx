@@ -85,7 +85,7 @@ export default function PWAInstall() {
   // Chrome / Edge install banner
   return (
     <div style={bannerStyle}>
-      <img src="/icon-192x192.png" alt="" style={{ width: 36, height: 36, borderRadius: 8, flexShrink: 0 }} />
+      <img src="/logo192.png" alt="" style={{ width: 36, height: 36, borderRadius: 8, flexShrink: 0 }} />
       <div style={{ flex: 1 }}>
         <p style={{ fontSize: "13px", color: "#111827", margin: "0 0 2px", fontWeight: 700 }}>
           Install RoastMyCV
