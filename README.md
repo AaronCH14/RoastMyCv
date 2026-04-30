@@ -40,33 +40,9 @@ Fix It Tips — 2-column actionable improvement cards
 Fully Responsive — mobile-first, single column on small screens
 Vite + React 18 — instant HMR dev experience
 Project Structure
-roastmycv/
-├── public/
-├── src/
-│   ├── components/
-│   │   ├── Header.jsx          # Sticky top nav — logo + CTA button
-│   │   ├── HeroSection.jsx     # H1 headline + subtext
-│   │   ├── InputArea.jsx       # Textarea, file upload, drag-drop zone
-│   │   ├── LoadingState.jsx    # Amber spinner while API is running
-│   │   ├── ResultSection.jsx   # Assembles all result cards
-│   │   ├── ScoreCard.jsx       # Big score number + progress bar
-│   │   ├── RoastCard.jsx       # The roast text with amber accent bar
-│   │   ├── StrengthsCard.jsx   # Green bullet list of strengths
-│   │   ├── WeaknessesCard.jsx  # Red bullet list of weaknesses
-│   │   ├── FixItCard.jsx       # Amber tint card with 2-col tip grid
-│   │   └── Footer.jsx          # Links + copyright
-│   ├── hooks/
-│   │   ├── useGemini.js        # Gemini API call + JSON parsing logic (You can customize for the result here:D)
-│   │   └── useFileParser.js    # PDF (pdfjs-dist) + DOCX (mammoth) parser
-│   ├── App.jsx                 # Root — state management + flow control
-│   ├── main.jsx                # React entry point
-│   └── index.css               # Tailwind directives + custom utilities
-├── .env                        # API key (see setup below)
-├── .gitignore
-├── index.html                  # Google Fonts + Material Symbols CDN
-├── tailwind.config.js          # Custom design tokens
-├── postcss.config.js
-└── vite.config.js
+
+<img width="1017" height="883" alt="image" src="https://github.com/user-attachments/assets/0b666af2-ed82-4904-b658-e08ec09a8793" />
+
 
 🚀 Setup & Installation
 Prerequisites
